@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      header,
+      footer,
+      #content {
+        padding: 5px;
+        margin: 3px;
+        border: 5px solid #b19cd8;
+        background-color: #ccb7e5;
+      }
+      #content > div,
+      #side-menu section {
+        padding: 4px;
+        margin: 2px;
+        border: 2px solid rgb(211, 18, 99);
+      }
+      #side-menu section {
+        border-color: rgb(226, 95, 123);
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <section id="content">
+      <div id="side-menu">
+        <section>Menu 1</section>
+        <section>Menu 2</section>
+      </div>
+      <div id="main">Main Content</div>
+    </section>
+    <footer>Footer</footer>
+  </body>
+</html>
