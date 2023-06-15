@@ -1,23 +1,11 @@
-var employed = false; // boolean
-var age = 24; // number
-var name = "First Last"; // string
-
-age = 30;
-
-// object (array)
-var skills = ["html", "css", "js"];
-// object (json)
-var person = {
-  employed: true,
-  age: 29,
-};
-// object (DOM, other)
-var el = document.getElementById("el");
-
-name = "Andreea";
-
-function printInfo() {
-  console.log(typeof skills, skills, age);
-  console.info("my name", name);
-  console.warn("person type", typeof person, person);
+function showHome() {
+  var page = document.getElementById("home");
+  page.style.display = "block";
 }
+
+function showSkills() {
+  var page = document.getElementById("skills");
+  page.style.display = "block";
+}
+
+showHome();
