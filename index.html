@@ -10,13 +10,13 @@
   <body>
     <header>
       <h1>Andreea Marosan</h1>
-      <img src="selfie.jpg.jpg" alt="" width="150" />
+      <img id="profile" src="selfie.jpg.jpg" alt="" />
       <h2 id="job-title">Marketing Specialist @ TEC Digital Agency</h2>
       <ul id="top-menu-bar">
-        <li><a href="#">Home</a></li>
+        <li><a href="#" onclick="showHome()">Home</a></li>
         <li><a href="#" onclick="showSkills()">Skills</a></li>
-        <li><a href="#">Known Languages</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="showLanguages()">Known Languages</a></li>
+        <li><a href="#" onclick="showProjects()">Projects</a></li>
       </ul>
     </header>
 
@@ -35,6 +35,7 @@
                 required
               />
             </div>
+
             <div>
               <label for="name">Your name</label>
               <input
@@ -66,6 +67,7 @@
             <li class="favorite">JS</li>
           </ul>
         </div>
+
         <div id="languages" class="page">
           <h2>Known languages</h2>
           <table border="2">
@@ -86,6 +88,10 @@
               <td>Beginner</td>
             </tr>
           </table>
+        </div>
+        <div id="projects" class="page">
+          <h2>Projects</h2>
+          <p>...</p>
         </div>
       </div>
     </section>
