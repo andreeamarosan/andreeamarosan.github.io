@@ -9,6 +9,10 @@ body {
   flex-direction: column;
 }
 
+header {
+  background: linear-gradient(45deg, #da60c599, transparent);
+}
+
 #header-wrapper {
   display: flex;
   flex-direction: row;
@@ -21,13 +25,12 @@ body {
 }
 #my-picture img {
   border-radius: 50%;
-  border: 4px solid pink;
+  border: 4px solid rgb(180, 9, 115);
+  height: 110px;
 }
 
-#profile {
-  border-radius: 50%;
-  border: 4px solid pink;
-  height: 110px;
+#header-info {
+  padding: 10px;
 }
 #header-wrapper h1 {
   margin: 0 0 5px 0;
