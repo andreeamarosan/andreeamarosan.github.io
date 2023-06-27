@@ -32,11 +32,6 @@ function showPage(id) {
 }
 
 function showSkills() {
-  var skills = [
-    { name: "HTML", favorite: true },
-    { name: "css" },
-    { name: "JS", favorite: true },
-  ];
   var htmlSkills = skills.map(function (skill) {
     // <li class="favorite">HTML</li>
     console.info("skill", skill);
@@ -46,9 +41,17 @@ function showSkills() {
   var ul = $("#skills ul");
   ul.innerHTML = htmlSkills.join("");
 }
-
+function loadSkills() {
+  var response = fetch("skills.json");
+  var loaded = response.then(function (r) {
+    return r.json();
+  });
+  loaded.then(function (skills) {
+    showSkills(skills);
+  });
+}
 // start our code
 
 showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-showSkills();
+loadSkills();
