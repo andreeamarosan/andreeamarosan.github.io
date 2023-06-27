@@ -84,6 +84,10 @@ h2 {
 .favorite {
   font-weight: bold;
 }
+#skills li span {
+  color: gray;
+  font-weight: 100;
+}
 #top-menu-bar {
   text-align: center;
   background-color: #fac898;
