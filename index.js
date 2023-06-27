@@ -30,6 +30,15 @@ function showPage(id) {
 
   show(activePage);
 }
+function clickOnMenu(e) {
+  var link = e.target.closest("a");
+  if (link) {
+    var id = link.dataset.page;
+    if (id) {
+      showPage(id);
+    }
+  }
+}
 function sortByEndorcements(a, b) {
   return b.endorcements - a.endorcements;
 }
@@ -38,7 +47,7 @@ function sortByName(a, b) {
   return a.name.localeCompare(b.name);
 }
 
-function showSkills() {
+function showSkills(skills) {
   skills.sort(sortByEndorcements);
   var htmlSkills = skills.map(function (skill) {
     // <li class="favorite">HTML</li>
