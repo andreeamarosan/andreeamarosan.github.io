@@ -45,13 +45,13 @@ header {
 #text-carousel {
   min-height: 60px;
   padding: 10px 0;
-  border-top: 2px solid #ffffff33;
+  border-top: 2px solid #a0068733;
 }
 .text-carousel-wrap {
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
-  color: #00ced1;
+  color: #d100c3;
   overflow: hidden;
   width: 100%;
 }
