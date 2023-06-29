@@ -1,4 +1,4 @@
-var activePage = "skills";
+let activePage = "skills";
 
 // utilities functions
 
@@ -12,7 +12,7 @@ function hide(id) {
 }
 
 function show(id) {
-  var page = $("#" + id);
+  const page = $("#" + id);
   console.info("show %o", id, page);
   page.style.display = "block";
 }
@@ -25,15 +25,15 @@ function showPage(id) {
 
   activePage = id;
 
-  var link = $(`#top-menu-bar a[data-page=${activePage}]`);
+  const link = $(`#top-menu-bar a[data-page=${activePage}]`);
   link.classList.add("active");
 
   show(activePage);
 }
 function clickOnMenu(e) {
-  var link = e.target.closest("a");
+  const link = e.target.closest("a");
   if (link) {
-    var id = link.dataset.page;
+    const id = link.dataset.page;
     if (id) {
       showPage(id);
     }
@@ -49,18 +49,19 @@ function sortByName(a, b) {
 
 function showSkills(skills) {
   skills.sort(sortByEndorcements);
-  var htmlSkills = skills.map(function (skill) {
-    // <li class="favorite">HTML</li>
-    console.info("skill", skill);
-    var cls = skill.favorite ? "favorite" : "";
-    return `<li class="${cls}">${skill.name} <span>- ${skill.endorcements}</span></li>`;
+  const htmlSkills = skills.map(function (skill) {
+    const cls = skill.favorite ? "favorite" : "";
+    return `<li class="${cls}">
+        ${skill.name} 
+        <span>- ${skill.endorcements}</span>
+      </li>`;
   });
-  var ul = $("#skills ul");
+  const ul = $("#skills ul");
   ul.innerHTML = htmlSkills.join("");
 }
 function loadSkills() {
-  var response = fetch("skills.json");
-  var loaded = response.then(function (r) {
+  const response = fetch("skills.json");
+  const loaded = response.then(function (r) {
     return r.json();
   });
   loaded.then(function (skills) {
