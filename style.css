@@ -42,6 +42,24 @@ header {
 #header-wrapper h2 {
   margin: 0;
 }
+#text-carousel {
+  min-height: 60px;
+  padding: 10px 0;
+  border-top: 2px solid #ffffff33;
+}
+.text-carousel-wrap {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #00ced1;
+  overflow: hidden;
+  width: 100%;
+}
+.text-carousel-line {
+  white-space: nowrap;
+  transition: 2s all ease;
+  margin-left: 0;
+}
 
 #content {
   flex: 1;
