@@ -11,13 +11,26 @@ var person = {
   employed: true,
   age: 29,
 };
+
 // object (DOM, other)
 var el = document.getElementById("el");
 
 name = "Andreea";
+var fVariable = function () {
+  console.info("functie ca variabila");
+};
+
+var f1Variable = () => {
+  console.info("functie ca variabila");
+};
 
 function printInfo() {
   console.log(typeof skills, skills, age);
   console.info("my name", name);
   console.warn("person type", typeof person, person);
 }
+fVariable();
+
+console.info("t1", typeof printInfo);
+console.info("t2", typeof fVariable);
+console.info("t4", typeof f1Variable);
