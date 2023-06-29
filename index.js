@@ -1,5 +1,14 @@
-let activePage = "skills";
+let activePage = "home";
 
+(function () {
+  const hash = document.location.hash.substring(1);
+  if (hash) {
+    const link = $(`#top-menu-bar a[data-page=${hash}]`);
+    if (link) {
+      activePage = hash;
+    }
+  }
+})();
 // utilities functions
 
 function $(selector) {
@@ -36,6 +45,7 @@ function clickOnMenu(e) {
     const id = link.dataset.page;
     if (id) {
       showPage(id);
+      document.location.hash = `#${id}`;
     }
   }
 }
